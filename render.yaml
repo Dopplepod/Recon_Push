@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: recon-v12
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /api/session
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: SECRET_KEY
+        generateValue: true
